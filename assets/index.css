@@ -11,9 +11,14 @@ body {
   font-size: 1.6rem;
   font-family: "Poppins";
 }
+html,body{
+  scroll-behavior: smooth;
+  /* làm mượt*/
+}
 a {
   text-decoration: none;
 }
+
 .btn {
   display: inline-block;
   min-width: 98px;
@@ -39,15 +44,29 @@ a {
   overflow: hidden;
 }
 /* header */
-.header {
-  height: 100vh;
+.fixed-header{
+  background-color: #e6f0ff;
+  padding-top: 26px;
+  position: sticky;
+  top: -26px;
+  z-index: 1;
+}
+.hero-wrap {
+  height: calc(100vh - 86px);
   background-color: #e6f0ff;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+.hero-wrap .content{
 }
 .navbar {
   display: flex;
   align-items: center;
-  padding-top: 38px;
+  /* padding-top: 38px; */
+  padding: 12px 0;
 }
 .navbar ul {
   display: flex;
@@ -75,20 +94,17 @@ a {
   margin-left: 18px;
   border-radius: 8px;
 }
-.hero {
-  margin-top: 130px;
-}
-.hero .info {
+.info {
   width: 51%;
 }
-.hero .sub-title {
+.sub-title {
   font-size: 1.8rem;
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.01rem;
   color: #687690;
 }
-.hero .title {
+.title {
   color: #000336;
   font-family: Poppins;
   font-size: 6.2rem;
@@ -96,7 +112,7 @@ a {
   line-height: 1.19;
   margin-top: 18px;
 }
-.hero .desc {
+.desc {
   color: #5a6473;
   font-family: Poppins;
   font-size: 1.8rem;
